@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "webservice.py",  // 项目入口文件（固定写这个）
+      "use": "@vercel/python"  // 告诉Vercel用Python构建器
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",  // 所有请求都指向入口文件
+      "dest": "webservice.py"
+    }
+  ]
+}
